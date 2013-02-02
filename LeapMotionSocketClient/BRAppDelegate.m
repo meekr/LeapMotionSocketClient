@@ -18,7 +18,7 @@
 
 - (IBAction)connectSocketServer:(id)sender {
     NSLog(@"server address: %@", [self.ipAddress stringValue]);
-//    [leapDetector connectSocket:[self.ipAddress stringValue]];
+    [leapDetector connectSocket:[self.ipAddress stringValue]];
 }
 
 @end

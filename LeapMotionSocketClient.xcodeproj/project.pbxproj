@@ -152,6 +152,7 @@
 				C218D1DE16BD7B9200AEA7EA /* Sources */,
 				C218D1DF16BD7B9200AEA7EA /* Frameworks */,
 				C218D1E016BD7B9200AEA7EA /* Resources */,
+				C218D23D16BD937800AEA7EA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -202,6 +203,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C218D23D16BD937800AEA7EA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# print some debug information\necho TARGET_BUILD_DIR=${TARGET_BUILD_DIR}\necho TARGET_NAME=${TARGET_NAME}\ncd ${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Contents/MacOS\nls -la\n# then remap the loader path\ninstall_name_tool -change @loader_path/libLeap.dylib @executable_path/../Resources/libLeap.dylib ${TARGET_NAME}";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C218D1DE16BD7B9200AEA7EA /* Sources */ = {
@@ -310,7 +327,6 @@
 				INFOPLIST_FILE = "LeapMotionSocketClient/LeapMotionSocketClient-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/LeapMotionSocketClient/LeapMotion\"",
 					"\"$(SRCROOT)/LeapMotion\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,7 +345,6 @@
 				INFOPLIST_FILE = "LeapMotionSocketClient/LeapMotionSocketClient-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/LeapMotionSocketClient/LeapMotion\"",
 					"\"$(SRCROOT)/LeapMotion\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
