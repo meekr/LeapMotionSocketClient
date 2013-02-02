@@ -13,6 +13,13 @@
 		C218D1F716BD7B9200AEA7EA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C218D1F516BD7B9200AEA7EA /* Credits.rtf */; };
 		C218D1FA16BD7B9200AEA7EA /* BRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C218D1F916BD7B9200AEA7EA /* BRAppDelegate.m */; };
 		C218D1FD16BD7B9200AEA7EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C218D1FB16BD7B9200AEA7EA /* MainMenu.xib */; };
+		C218D20C16BD7F2F00AEA7EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C218D20B16BD7F2F00AEA7EA /* Security.framework */; };
+		C218D20E16BD7F3400AEA7EA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C218D20D16BD7F3400AEA7EA /* CFNetwork.framework */; };
+		C218D21F16BD87DA00AEA7EA /* LeapDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = C218D21E16BD87DA00AEA7EA /* LeapDetector.m */; };
+		C218D22116BD8A6B00AEA7EA /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C218D21C16BD869600AEA7EA /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C218D23A16BD910300AEA7EA /* LeapObjectiveC.mm in Sources */ = {isa = PBXBuildFile; fileRef = C218D23816BD910300AEA7EA /* LeapObjectiveC.mm */; };
+		C218D23B16BD910300AEA7EA /* libLeap.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C218D23916BD910300AEA7EA /* libLeap.dylib */; };
+		C218D23C16BD912000AEA7EA /* libLeap.dylib in Resources */ = {isa = PBXBuildFile; fileRef = C218D23916BD910300AEA7EA /* libLeap.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +36,17 @@
 		C218D1F816BD7B9200AEA7EA /* BRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRAppDelegate.h; sourceTree = "<group>"; };
 		C218D1F916BD7B9200AEA7EA /* BRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRAppDelegate.m; sourceTree = "<group>"; };
 		C218D1FC16BD7B9200AEA7EA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C218D20B16BD7F2F00AEA7EA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C218D20D16BD7F3400AEA7EA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C218D21B16BD869600AEA7EA /* GCDAsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		C218D21C16BD869600AEA7EA /* GCDAsyncSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		C218D21D16BD87DA00AEA7EA /* LeapDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapDetector.h; sourceTree = "<group>"; };
+		C218D21E16BD87DA00AEA7EA /* LeapDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeapDetector.m; sourceTree = "<group>"; };
+		C218D23516BD910300AEA7EA /* Leap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Leap.h; sourceTree = "<group>"; };
+		C218D23616BD910300AEA7EA /* LeapMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapMath.h; sourceTree = "<group>"; };
+		C218D23716BD910300AEA7EA /* LeapObjectiveC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeapObjectiveC.h; sourceTree = "<group>"; };
+		C218D23816BD910300AEA7EA /* LeapObjectiveC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LeapObjectiveC.mm; sourceTree = "<group>"; };
+		C218D23916BD910300AEA7EA /* libLeap.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libLeap.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C218D20E16BD7F3400AEA7EA /* CFNetwork.framework in Frameworks */,
+				C218D20C16BD7F2F00AEA7EA /* Security.framework in Frameworks */,
 				C218D1E716BD7B9200AEA7EA /* Cocoa.framework in Frameworks */,
+				C218D23B16BD910300AEA7EA /* libLeap.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				C218D1EC16BD7B9200AEA7EA /* LeapMotionSocketClient */,
+				C218D23416BD910300AEA7EA /* LeapMotion */,
 				C218D1E516BD7B9200AEA7EA /* Frameworks */,
 				C218D1E316BD7B9200AEA7EA /* Products */,
 			);
@@ -63,6 +85,8 @@
 		C218D1E516BD7B9200AEA7EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C218D20D16BD7F3400AEA7EA /* CFNetwork.framework */,
+				C218D20B16BD7F2F00AEA7EA /* Security.framework */,
 				C218D1E616BD7B9200AEA7EA /* Cocoa.framework */,
 				C218D1E816BD7B9200AEA7EA /* Other Frameworks */,
 			);
@@ -84,7 +108,11 @@
 			children = (
 				C218D1F816BD7B9200AEA7EA /* BRAppDelegate.h */,
 				C218D1F916BD7B9200AEA7EA /* BRAppDelegate.m */,
+				C218D21B16BD869600AEA7EA /* GCDAsyncSocket.h */,
+				C218D21C16BD869600AEA7EA /* GCDAsyncSocket.m */,
 				C218D1FB16BD7B9200AEA7EA /* MainMenu.xib */,
+				C218D21D16BD87DA00AEA7EA /* LeapDetector.h */,
+				C218D21E16BD87DA00AEA7EA /* LeapDetector.m */,
 				C218D1ED16BD7B9200AEA7EA /* Supporting Files */,
 			);
 			path = LeapMotionSocketClient;
@@ -100,6 +128,18 @@
 				C218D1F516BD7B9200AEA7EA /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C218D23416BD910300AEA7EA /* LeapMotion */ = {
+			isa = PBXGroup;
+			children = (
+				C218D23516BD910300AEA7EA /* Leap.h */,
+				C218D23616BD910300AEA7EA /* LeapMath.h */,
+				C218D23716BD910300AEA7EA /* LeapObjectiveC.h */,
+				C218D23816BD910300AEA7EA /* LeapObjectiveC.mm */,
+				C218D23916BD910300AEA7EA /* libLeap.dylib */,
+			);
+			path = LeapMotion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +197,7 @@
 				C218D1F116BD7B9200AEA7EA /* InfoPlist.strings in Resources */,
 				C218D1F716BD7B9200AEA7EA /* Credits.rtf in Resources */,
 				C218D1FD16BD7B9200AEA7EA /* MainMenu.xib in Resources */,
+				C218D23C16BD912000AEA7EA /* libLeap.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,8 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C218D22116BD8A6B00AEA7EA /* GCDAsyncSocket.m in Sources */,
 				C218D1F316BD7B9200AEA7EA /* main.m in Sources */,
 				C218D1FA16BD7B9200AEA7EA /* BRAppDelegate.m in Sources */,
+				C218D21F16BD87DA00AEA7EA /* LeapDetector.m in Sources */,
+				C218D23A16BD910300AEA7EA /* LeapObjectiveC.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,10 +302,17 @@
 		C218D20116BD7B9200AEA7EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeapMotionSocketClient/LeapMotionSocketClient-Prefix.pch";
 				INFOPLIST_FILE = "LeapMotionSocketClient/LeapMotionSocketClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/LeapMotionSocketClient/LeapMotion\"",
+					"\"$(SRCROOT)/LeapMotion\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -270,10 +321,17 @@
 		C218D20216BD7B9200AEA7EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LeapMotionSocketClient/LeapMotionSocketClient-Prefix.pch";
 				INFOPLIST_FILE = "LeapMotionSocketClient/LeapMotionSocketClient-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/LeapMotionSocketClient/LeapMotion\"",
+					"\"$(SRCROOT)/LeapMotion\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -298,6 +356,7 @@
 				C218D20216BD7B9200AEA7EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
