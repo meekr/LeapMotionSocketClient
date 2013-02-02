@@ -11,5 +11,8 @@
 @interface BRAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSTextField *ipAddress;
+
+- (IBAction)connectSocketServer:(id)sender;
 
 @end

@@ -15,4 +15,7 @@
     // Insert code here to initialize your application
 }
 
+- (IBAction)connectSocketServer:(id)sender {
+    NSLog(@"server address: %@", [self.ipAddress stringValue]);
+}
 @end
