@@ -68,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				C218D1EC16BD7B9200AEA7EA /* LeapMotionSocketClient */,
+				C29C4BFA16BDF8AF00DDA8F1 /* classes */,
 				C218D23416BD910300AEA7EA /* LeapMotion */,
 				C218D1E516BD7B9200AEA7EA /* Frameworks */,
 				C218D1E316BD7B9200AEA7EA /* Products */,
@@ -140,6 +141,13 @@
 				C218D23916BD910300AEA7EA /* libLeap.dylib */,
 			);
 			path = LeapMotion;
+			sourceTree = "<group>";
+		};
+		C29C4BFA16BDF8AF00DDA8F1 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

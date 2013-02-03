@@ -10,9 +10,6 @@
 #import "LeapDetector.h"
 
 @interface BRAppDelegate : NSObject <NSApplicationDelegate>
-{
-    LeapDetector *leapDetector;
-}
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *ipAddress;

@@ -8,9 +8,17 @@
 
 #import "LeapDetector.h"
 
+
+static LeapDetector *_instance;
+
 @implementation LeapDetector
-{
-    LeapController *controller;
+
+@synthesize socket = _socket;
+
++ (LeapDetector *)instance {
+    if (!_instance)
+        _instance = [[LeapDetector alloc] init];
+    return _instance;
 }
 
 - (void)run
@@ -23,9 +31,9 @@
 - (void)connectSocket:(NSString *)serverAddress
 {
     // start socket
-    socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
+    _socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
     NSError *err = nil;
-    if (![socket connectToHost:serverAddress onPort:54321 error:&err]) {
+    if (![_socket connectToHost:serverAddress onPort:54321 error:&err]) {
         NSLog(@"%@", err.description);
     }
     else {
@@ -36,7 +44,7 @@
 -(void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port
 {
     NSLog(@"connected to %@", host);
-    [socket readDataWithTimeout:-1 tag:0];
+    [_socket readDataWithTimeout:-1 tag:0];
 }
 
 
@@ -46,10 +54,10 @@
 }
 
 - (void)sendSocketMsg:(NSString *)message {
-    if (socket) {
+    if (_socket) {
         message = [NSString stringWithFormat:@"#%@", message];
-        [socket writeData:[message dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
-        [socket readDataWithTimeout:-1 tag:0];        
+        [_socket writeData:[message dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
+        [_socket readDataWithTimeout:-1 tag:0];
     }
 }
 

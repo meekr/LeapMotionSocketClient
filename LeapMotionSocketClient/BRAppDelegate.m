@@ -12,13 +12,12 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    leapDetector = [[LeapDetector alloc] init];
-    [leapDetector run];
+    [[LeapDetector instance] run];
 }
 
 - (IBAction)connectSocketServer:(id)sender {
     NSLog(@"server address: %@", [self.ipAddress stringValue]);
-    [leapDetector connectSocket:[self.ipAddress stringValue]];
+    [[LeapDetector instance] connectSocket:[self.ipAddress stringValue]];
 }
 
 @end

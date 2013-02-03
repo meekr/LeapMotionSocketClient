@@ -12,8 +12,12 @@
 
 @interface LeapDetector : NSObject<LeapDelegate, GCDAsyncSocketDelegate>
 {
-    GCDAsyncSocket *socket;
+    LeapController *controller;
 }
+
+@property (nonatomic) GCDAsyncSocket *socket;
+
++ (LeapDetector *)instance;
 
 - (void)run;
 - (void)connectSocket:(NSString *)serverAddress;
